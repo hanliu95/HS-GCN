@@ -1,5 +1,5 @@
 # HamGNN
-This is our experiment codes for the paper :
+This is our experiment codes for the paper:
 
 Graph Neural Networks in Hamming Space for Efficient Recommendation.
 
