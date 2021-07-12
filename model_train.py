@@ -2,7 +2,7 @@ import pickle
 import torch
 import math
 import numpy as np
-from HamGNN_model import HamGNN
+from HSGCN_model import HSGCN
 from torch_geometric.data import Data
 import torch.utils.data as D
 import torch.nn.functional as F
@@ -32,8 +32,8 @@ class LBSign(torch.autograd.Function):
 class Net(torch.nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.conv1 = HamGNN()
-        self.conv2 = HamGNN()
+        self.conv1 = HSGCN()
+        self.conv2 = HSGCN()
         self.sign = LBSign.apply
     def forward(self, data, beta=1, trainning=True):
         x, edge_index = data.x, data.edge_index
@@ -123,4 +123,4 @@ with torch.no_grad():
     para = {}
     para['hash_codes'] = hash_codes
     pickle.dump(para, open('./para/movie_codes.para', 'wb'))
-    print('HamGNN model training finished...')
+    print('HSGCN model training finished...')
