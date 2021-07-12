@@ -3,9 +3,9 @@ import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing
 from torch_geometric.utils import add_self_loops, degree
 
-class HamGNN(MessagePassing):
+class HSGCN(MessagePassing):
     def __init__(self):
-        super(HamGNN, self).__init__(aggr='add')
+        super(HSGCN, self).__init__(aggr='add')
 
     def forward(self, x, edge_index):
         edge_index, _ = add_self_loops(edge_index, num_nodes=x.size(0))
