@@ -1,7 +1,7 @@
-# HamGNN
+# HSGCN
 This is our experiment codes for the paper:
 
-Graph Neural Networks in Hamming Space for Efficient Recommendation.
+HS-GCN: Hamming Spatial Graph Convolutional Networks for Recommendation.
 
 ## Environment settings
 * Python 3.7
@@ -13,7 +13,7 @@ Graph Neural Networks in Hamming Space for Efficient Recommendation.
 ## File specification
 * data_load.py : loads the raw data in path `./raw_data`, and the results are saved in path `./para`.
 * data_triple.py : obtains the triplets for model training, and the results are saved in path `./para`.
-* HamGNN_model.py : implements the model framework of HamGNN.
+* HSGCN_model.py : implements the model framework of HamGNN.
 * model_train.py : the training process of model.
 * model_test.py : the testing process of model.
 
@@ -39,7 +39,7 @@ Graph Neural Networks in Hamming Space for Efficient Recommendation.
   ...
   ```
   
-  File model_test.py should be executed after the training process, and the performance of HamGNN will be printed:
+  File model_test.py should be executed after the training process, and the performance of HSGCN will be printed:
   
   ```
   HR@50: 0.2052; NDCG@50: 0.3081; P@50: 0.2020
