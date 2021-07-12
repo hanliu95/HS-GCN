@@ -1,4 +1,4 @@
-# HSGCN
+# HS-GCN
 This is our experiment codes for the paper:
 
 HS-GCN: Hamming Spatial Graph Convolutional Networks for Recommendation.
